@@ -1,0 +1,17 @@
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Business.deps.json
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Business.dll
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Business.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Common.dll
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Repository.dll
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Repository.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Business\bin\Debug\net8.0\Learnify.Common.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.csproj.AssemblyReference.cache
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.AssemblyInfoInputs.cache
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.AssemblyInfo.cs
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.csproj.CoreCompileInputs.cache
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.6442100F.Up2Date
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.dll
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\refint\Learnify.Business.dll
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\Learnify.Business.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Business\obj\Debug\net8.0\ref\Learnify.Business.dll

@@ -1,0 +1,11 @@
+D:\work\AI_Instructor\NetBE\Learnify.Common\bin\Debug\net8.0\Learnify.Common.deps.json
+D:\work\AI_Instructor\NetBE\Learnify.Common\bin\Debug\net8.0\Learnify.Common.dll
+D:\work\AI_Instructor\NetBE\Learnify.Common\bin\Debug\net8.0\Learnify.Common.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\Learnify.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\Learnify.Common.AssemblyInfoInputs.cache
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\Learnify.Common.AssemblyInfo.cs
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\Learnify.Common.csproj.CoreCompileInputs.cache
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\Learnify.Common.dll
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\refint\Learnify.Common.dll
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\Learnify.Common.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Common\obj\Debug\net8.0\ref\Learnify.Common.dll

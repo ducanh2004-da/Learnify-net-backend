@@ -1,0 +1,17 @@
+D:\work\AI_Instructor\NetBE\Learnify.Repository\bin\Debug\net8.0\Learnify.Repository.deps.json
+D:\work\AI_Instructor\NetBE\Learnify.Repository\bin\Debug\net8.0\Learnify.Repository.runtimeconfig.json
+D:\work\AI_Instructor\NetBE\Learnify.Repository\bin\Debug\net8.0\Learnify.Repository.dll
+D:\work\AI_Instructor\NetBE\Learnify.Repository\bin\Debug\net8.0\Learnify.Repository.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Repository\bin\Debug\net8.0\Learnify.Common.dll
+D:\work\AI_Instructor\NetBE\Learnify.Repository\bin\Debug\net8.0\Learnify.Common.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.csproj.AssemblyReference.cache
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.AssemblyInfoInputs.cache
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.AssemblyInfo.cs
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.csproj.CoreCompileInputs.cache
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.FBDFC034.Up2Date
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.dll
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\refint\Learnify.Repository.dll
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.pdb
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\Learnify.Repository.genruntimeconfig.cache
+D:\work\AI_Instructor\NetBE\Learnify.Repository\obj\Debug\net8.0\ref\Learnify.Repository.dll
