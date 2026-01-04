@@ -8,9 +8,9 @@ namespace Learnify.Common.Enums
 {
     public enum Role
     {
-        INSTRUCTOR,
         USER,
-        REVIEWER,
-        ADMIN
+        ADMIN,
+        INSTRUCTOR,
+        REVIEWER
     }
 }

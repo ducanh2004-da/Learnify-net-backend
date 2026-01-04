@@ -56,13 +56,13 @@ namespace NetBackend.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<UserResponse>> CreateUser([FromBody] CreateUserInput input)
+        public async Task<ActionResult<UserListResponse>> CreateUser([FromBody] CreateUserInput input)
         {
             try
             {
                 var user = await _userService.CreateUserAsync(input);
                 // CreatedAtAction trả 201 với route tới GetUser
-                return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+                return user;
             }
             catch (InvalidOperationException ex)
             {
@@ -76,12 +76,12 @@ namespace NetBackend.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<UserResponse>> UpdateUser([FromBody] UpdateUserInput input)
+        public async Task<ActionResult<UserListResponse>> UpdateUser([FromBody] UpdateUserInput input)
         {
             try
             {
                 var result = await _userService.UpdateUserAsync(input);
-                return Ok(result);
+                return result;
             }
             catch (KeyNotFoundException ex)
             {
@@ -95,12 +95,12 @@ namespace NetBackend.Controllers
         }
 
         [HttpPut("admin")]
-        public async Task<ActionResult<UserResponse>> UpdateUserAdmin([FromBody] UpdateUserAdminInput input)
+        public async Task<ActionResult<UserListResponse>> UpdateUserAdmin([FromBody] UpdateUserAdminInput input)
         {
             try
             {
                 var user = await _userService.UpdateUserAdminAsync(input);
-                return Ok(user);
+                return user;
             }
             catch (KeyNotFoundException ex)
             {

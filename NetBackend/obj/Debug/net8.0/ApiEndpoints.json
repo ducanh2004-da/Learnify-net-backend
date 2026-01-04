@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Learnify.Common.DTOs.UserResponse",
+        "Type": "Learnify.Common.DTOs.UserListResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Learnify.Common.DTOs.UserResponse",
+        "Type": "Learnify.Common.DTOs.UserListResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -129,7 +129,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Learnify.Common.DTOs.UserResponse",
+        "Type": "Learnify.Common.DTOs.UserListResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

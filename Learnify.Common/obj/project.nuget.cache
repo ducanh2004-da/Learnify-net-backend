@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "OWZI0NeNQT4=",
+  "dgSpecHash": "NhO9ke9wBcE=",
   "success": true,
-  "projectFilePath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\domin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\domin\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Npgsql' 7.0.6 has a known high severity vulnerability, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

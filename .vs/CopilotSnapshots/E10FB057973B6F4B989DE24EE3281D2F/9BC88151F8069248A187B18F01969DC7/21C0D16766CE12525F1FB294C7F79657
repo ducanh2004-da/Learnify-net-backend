@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using NpgsqlTypes;
+
+namespace Learnify.Common.Enums
+{
+    public enum Role
+    {
+        [PgName("user")]
+        USER = 0,       // Map với PostgreSQL enum label 'user'
+        [PgName("admin")]
+        ADMIN = 1,      // Map với PostgreSQL enum label 'admin'
+        [PgName("instructor")]
+        INSTRUCTOR = 2, // Map với PostgreSQL enum label 'instructor'
+        [PgName("reviewer")]
+        REVIEWER = 3    // Map với PostgreSQL enum label 'reviewer'
+    }
+}

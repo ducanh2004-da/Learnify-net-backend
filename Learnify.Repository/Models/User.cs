@@ -16,7 +16,7 @@ namespace Learnify.Repository.Models
         public string? GoogleId { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Address { get; set; }
-        public Role Role { get; set; } = Role.USER;
+        public string Role { get; set; } = "USER";
         public string? HashedRefreshToken { get; set; }
         public string? Avatar { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

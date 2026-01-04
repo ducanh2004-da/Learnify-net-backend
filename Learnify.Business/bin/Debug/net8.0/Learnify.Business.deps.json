@@ -185,6 +185,9 @@
         }
       },
       "Learnify.Common/1.0.0": {
+        "dependencies": {
+          "Npgsql": "8.0.4"
+        },
         "runtime": {
           "Learnify.Common.dll": {
             "assemblyVersion": "1.0.0",

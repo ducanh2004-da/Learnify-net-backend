@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Learnify.Common.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace Learnify.Common.DTOs
@@ -20,8 +21,8 @@ namespace Learnify.Common.DTOs
     {
         public bool IsSuccess { get; set; }
         // <-- Sửa ở đây: dùng List<UserResponse> (DTO), không phải List<User> (entity)
-        public List<UserResponse> Users { get; set; } = new();
-        public int Count { get; set; }
+        public List<UserResponse>? Users { get; set; } = new();
+        public int? Count { get; set; }
         public string Message { get; set; } = string.Empty;
     }
 
@@ -48,6 +49,6 @@ namespace Learnify.Common.DTOs
 
     public class UpdateUserAdminInput : UpdateUserInput
     {
-        public string? Role { get; set; }
+        public string? Role { get; set; } = "USER";
     }
 }

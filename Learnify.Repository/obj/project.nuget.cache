@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nUGaJl2XIX0=",
+  "dgSpecHash": "2G/IoiU5eKw=",
   "success": true,
-  "projectFilePath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj",
+  "projectFilePath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\domin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\domin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

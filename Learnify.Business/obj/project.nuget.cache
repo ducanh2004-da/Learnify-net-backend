@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ClFll8RyXCQ=",
+  "dgSpecHash": "y+ZH9pDydpI=",
   "success": true,
-  "projectFilePath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\Learnify.Business.csproj",
+  "projectFilePath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Learnify.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\domin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\domin\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",

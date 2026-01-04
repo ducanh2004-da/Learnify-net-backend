@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O3WbCX4bgoo=",
+  "dgSpecHash": "fXRY2ig+8L4=",
   "success": true,
-  "projectFilePath": "D:\\work\\AI_Instructor\\NetBE\\NetBackend\\NetBackend.csproj",
+  "projectFilePath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\domin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\domin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

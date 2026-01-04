@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\work\\AI_Instructor\\NetBE\\NetBackend\\NetBackend.csproj": {}
+    "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.csproj": {}
   },
   "projects": {
-    "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\Learnify.Business.csproj": {
+    "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Learnify.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\Learnify.Business.csproj",
+        "projectUniqueName": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Learnify.Business.csproj",
         "projectName": "Learnify.Business",
-        "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\Learnify.Business.csproj",
+        "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Learnify.Business.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\obj\\",
+        "outputPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj": {
-                "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj"
+              "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj": {
+                "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj"
               },
-              "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj": {
-                "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj"
+              "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj": {
+                "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj": {
+    "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj",
+        "projectUniqueName": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj",
         "projectName": "Learnify.Common",
-        "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj",
+        "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\obj\\",
+        "outputPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -125,6 +125,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -145,14 +151,14 @@
         }
       }
     },
-    "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj": {
+    "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj",
+        "projectUniqueName": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj",
         "projectName": "Learnify.Repository",
-        "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj",
+        "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\obj\\",
+        "outputPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -173,8 +179,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj": {
-                "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj"
+              "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj": {
+                "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj"
               }
             }
           }
@@ -229,14 +235,14 @@
         }
       }
     },
-    "D:\\work\\AI_Instructor\\NetBE\\NetBackend\\NetBackend.csproj": {
+    "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\AI_Instructor\\NetBE\\NetBackend\\NetBackend.csproj",
+        "projectUniqueName": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.csproj",
         "projectName": "NetBackend",
-        "projectPath": "D:\\work\\AI_Instructor\\NetBE\\NetBackend\\NetBackend.csproj",
+        "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\AI_Instructor\\NetBE\\NetBackend\\obj\\",
+        "outputPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -257,14 +263,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\Learnify.Business.csproj": {
-                "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Business\\Learnify.Business.csproj"
+              "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Learnify.Business.csproj": {
+                "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Learnify.Business.csproj"
               },
-              "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj": {
-                "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Common\\Learnify.Common.csproj"
+              "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj": {
+                "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj"
               },
-              "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj": {
-                "projectPath": "D:\\work\\AI_Instructor\\NetBE\\Learnify.Repository\\Learnify.Repository.csproj"
+              "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj": {
+                "projectPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Learnify.Repository.csproj"
               }
             }
           }

@@ -26,65 +26,82 @@ namespace Learnify.Business.Services
 
             if (users == null || !users.Any())
             {
-                return new UserListResponse
-                {
-                    IsSuccess = false,
-                    Users = new List<UserResponse>(),
-                    Count = 0,
-                    Message = "Users retrieved unsuccessfully"
-                };
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Users retrieved unsuccessfully");
             }
 
-            return new UserListResponse
-            {
-                IsSuccess = true,
-                Users = users.Select(MapToResponse).ToList(),
-                Count = count,
-                Message = "Users retrieved successfully"
-            };
+            var usersDto = users.Select(MapToResponse).ToList();
+            return MapToListResponse(true, usersDto, "Users retrieved successfully");
         }
 
-        public async Task<UserResponse> GetUserByIdAsync(string id)
+        public async Task<UserListResponse> GetUserByIdAsync(string id)
         {
             var user = await _userRepository.GetByIdAsync(id);
             if (user == null)
-                throw new KeyNotFoundException($"User with ID {id} not found");
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "User retrieved unsuccessfully");
 
-            return MapToResponse(user);
+            var dto = MapToResponse(user);
+            return MapToListResponse(true, dto, "User retrieved successfully");
         }
 
-        public async Task<UserResponse> CreateUserAsync(CreateUserInput input)
+        public async Task<UserListResponse> CreateUserAsync(CreateUserInput input)
         {
-            var existingUser = await _userRepository.GetByEmailAsync(input.Email);
-            if (existingUser != null)
-                throw new InvalidOperationException("Email already exists");
-
-            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(input.Password);
-
-            var user = new User
+            if (string.IsNullOrWhiteSpace(input.Username) ||
+                string.IsNullOrWhiteSpace(input.Email) ||
+                string.IsNullOrWhiteSpace(input.Password))
             {
-                Username = input.Username,
-                Email = input.Email,
-                Password = hashedPassword,
-                PhoneNumber = input.PhoneNumber,
-            };
-
-            // parse role if provided (safely)
-            if (!string.IsNullOrWhiteSpace(input.Role))
-            {
-                if (!Enum.TryParse<Role>(input.Role, true, out var parsedRole))
-                    throw new ArgumentException("Invalid role value", nameof(input.Role));
-                user.Role = parsedRole;
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Username, email and password are required");
             }
 
-            // call repository to add and save
-            await _userRepository.CreateAsync(user);
+            try
+            {
+                var existingUser = await _userRepository.GetByEmailAsync(input.Email);
+                if (existingUser != null)
+                    return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Email already exist");
 
-            // return the created user's DTO (user.Id should be set after SaveChanges)
-            return MapToResponse(user);
+                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(input.Password);
+
+                var avatarValue = input.Avatar ?? string.Empty;
+                var addressValue = input.Address ?? string.Empty;
+                var phoneValue = input.PhoneNumber ?? string.Empty;
+
+                var user = new User
+                {
+                    // ✅ GENERATE ID TRƯỚC KHI LƯU
+                    Id = Guid.NewGuid().ToString(), // Hoặc ObjectId.GenerateNewId().ToString() nếu MongoDB
+
+                    Username = input.Username,
+                    Email = input.Email,
+                    Password = hashedPassword,
+                    PhoneNumber = phoneValue,
+                    Address = addressValue,
+                    Avatar = avatarValue,
+                    Role = input.Role,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                };
+
+                
+
+                // ✅ KHÔNG GÁN - CHỈ AWAIT
+                await _userRepository.CreateAsync(user);
+
+                // ✅ Sử dụng user đã có Id (đã generate ở trên)
+                // Không cần GetByEmailAsync nữa vì user đã có đầy đủ thông tin
+                var createdDto = MapToResponse(user);
+                return MapToListResponse(true, createdDto, "User created successfully");
+            }
+            catch (Exception ex)
+            {
+                // Log chi tiết để debug
+                Console.WriteLine($"Error creating user: {ex.Message}");
+                Console.WriteLine($"Inner exception: {ex.InnerException?.Message}");
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), $"Internal server error: {ex.Message}");
+            }
         }
 
-        public async Task<UserResponse> UpdateUserAsync(UpdateUserInput input)
+
+
+        public async Task<UserListResponse> UpdateUserAsync(UpdateUserInput input)
         {
             var user = await _userRepository.GetByIdAsync(input.Id);
             if (user == null)
@@ -108,10 +125,12 @@ namespace Learnify.Business.Services
 
             await _userRepository.UpdateAsync(user);
 
-            return MapToResponse(user);
+            // trả về dưới dạng list chứa 1 phần tử
+            var dto = MapToResponse(user);
+            return MapToListResponse(true, dto, "User updated successfully");
         }
 
-        public async Task<UserResponse> UpdateUserAdminAsync(UpdateUserAdminInput input)
+        public async Task<UserListResponse> UpdateUserAdminAsync(UpdateUserAdminInput input)
         {
             var user = await _userRepository.GetByIdAsync(input.Id);
             if (user == null)
@@ -121,7 +140,7 @@ namespace Learnify.Business.Services
             {
                 var emailExists = await _userRepository.GetByEmailAsync(input.Email);
                 if (emailExists != null && emailExists.Id != input.Id)
-                    throw new InvalidOperationException("Email already in use by another user");
+                    return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Email already in use by another user");
             }
 
             if (!string.IsNullOrEmpty(input.Username)) user.Username = input.Username;
@@ -134,26 +153,28 @@ namespace Learnify.Business.Services
             {
                 if (!Enum.TryParse<Role>(input.Role, true, out var parsedRole))
                     throw new ArgumentException("Invalid role value", nameof(input.Role));
-                user.Role = parsedRole;
+                user.Role = input.Role;
             }
 
-            user.UpdatedAt = DateTime.UtcNow;
+                user.UpdatedAt = DateTime.UtcNow;
 
             await _userRepository.UpdateAsync(user);
 
-            return MapToResponse(user);
+            var dto = MapToResponse(user);
+            return MapToListResponse(true, dto, "Update user successfully");
         }
 
-        public async Task DeleteUserAsync(string id)
+        public async Task<UserListResponse> DeleteUserAsync(string id)
         {
             var user = await _userRepository.GetByIdAsync(id);
             if (user == null)
-                throw new KeyNotFoundException($"User with ID {id} not found");
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "User not found");
 
-            if (user.Role == Role.ADMIN)
-                throw new InvalidOperationException("Cannot delete an ADMIN user");
+            if (user.Role == "ADMIN")
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Cannot delete an admin user");
 
             await _userRepository.DeleteAsync(id);
+            return MapToListResponse(true, Enumerable.Empty<UserResponse>(), "User deleted successfully");
         }
 
         private UserResponse MapToResponse(User user)
@@ -166,9 +187,35 @@ namespace Learnify.Business.Services
                 PhoneNumber = user.PhoneNumber,
                 Address = user.Address,
                 Role = user.Role.ToString(),
-                Avatar = user.Avatar,
+                Avatar = user.Avatar ?? string.Empty,
                 CreatedAt = user.CreatedAt,
                 UpdatedAt = user.UpdatedAt
+            };
+        }
+
+        // overload: nhận IEnumerable<UserResponse>
+        private UserListResponse MapToListResponse(bool isSuccess, IEnumerable<UserResponse>? users, string message = "")
+        {
+            var list = users?.ToList() ?? new List<UserResponse>();
+            return new UserListResponse
+            {
+                IsSuccess = isSuccess,
+                Users = list,
+                Count = list.Count,
+                Message = message ?? string.Empty
+            };
+        }
+
+        // overload: nhận single UserResponse (tiện khi chỉ có 1 user)
+        private UserListResponse MapToListResponse(bool isSuccess, UserResponse? user, string message = "")
+        {
+            var list = user is null ? new List<UserResponse>() : new List<UserResponse> { user };
+            return new UserListResponse
+            {
+                IsSuccess = isSuccess,
+                Users = list,
+                Count = list.Count,
+                Message = message ?? string.Empty
             };
         }
     }
