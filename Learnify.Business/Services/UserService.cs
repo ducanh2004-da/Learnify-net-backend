@@ -1,4 +1,5 @@
-﻿using Learnify.Common.DTOs;
+﻿// service
+using Learnify.Common.DTOs;
 using Learnify.Business.Interfaces;
 using Learnify.Repository.Interfaces;
 using Learnify.Repository.Models;
@@ -120,12 +121,17 @@ namespace Learnify.Business.Services
             if (input.Address != null) user.Address = input.Address;
             if (input.Avatar != null) user.Avatar = input.Avatar;
 
+            // FIX: Đảm bảo CreatedAt có Kind = UTC
+            if (user.CreatedAt.Kind == DateTimeKind.Unspecified)
+            {
+                user.CreatedAt = DateTime.SpecifyKind(user.CreatedAt, DateTimeKind.Utc);
+            }
+
             // update metadata
             user.UpdatedAt = DateTime.UtcNow;
 
             await _userRepository.UpdateAsync(user);
 
-            // trả về dưới dạng list chứa 1 phần tử
             var dto = MapToResponse(user);
             return MapToListResponse(true, dto, "User updated successfully");
         }
@@ -156,7 +162,13 @@ namespace Learnify.Business.Services
                 user.Role = input.Role;
             }
 
-                user.UpdatedAt = DateTime.UtcNow;
+            // ✅ FIX: Đảm bảo CreatedAt có Kind = UTC
+            if (user.CreatedAt.Kind == DateTimeKind.Unspecified)
+            {
+                user.CreatedAt = DateTime.SpecifyKind(user.CreatedAt, DateTimeKind.Utc);
+            }
+
+            user.UpdatedAt = DateTime.UtcNow;
 
             await _userRepository.UpdateAsync(user);
 

@@ -21,14 +21,19 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 // CORS
+// ? CORS cho phép NestJS g?i
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-        policyBuilder => policyBuilder
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
+    options.AddPolicy("NestJSPolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:10000") // NestJS port
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -39,7 +44,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAll");
+app.UseCors("NestJSPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

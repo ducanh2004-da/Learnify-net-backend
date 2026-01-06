@@ -13,8 +13,8 @@ namespace Learnify.Common.DTOs
         public string? Address { get; set; }
         public string Role { get; set; } = string.Empty;
         public string? Avatar { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
     }
 
     public class UserListResponse

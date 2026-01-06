@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a68abec2e7fad3b97fcfe122ca2906f56e368bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c1d3acec60ab508980b94ddb1c92d7a5f97f988")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
