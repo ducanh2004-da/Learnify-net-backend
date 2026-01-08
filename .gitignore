@@ -64,6 +64,10 @@ secrets.json
 secrets.*
 # Ignore environment-specific dev settings
 appsettings.*.Development.json
+# block production appsettings
+appsettings.Production.json
+appsettings.*.Production.json
+
 appsettings.Local.json
 # Keep appsettings.json (if you want) — otherwise uncomment next line to ignore it too
 # appsettings.json

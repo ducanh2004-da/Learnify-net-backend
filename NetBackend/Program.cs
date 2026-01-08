@@ -38,10 +38,17 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+// ??c t? appsettings ho?c env var
+var enableSwagger = builder.Configuration.GetValue<bool>("EnableSwagger", false);
+
+if (app.Environment.IsDevelopment() || enableSwagger)
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+        // c.RoutePrefix = string.Empty; // n?u mu?n ??t swagger ? root
+    });
 }
 
 app.UseCors("NestJSPolicy");

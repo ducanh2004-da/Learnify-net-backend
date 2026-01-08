@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{38148CF6-ACF4-452A-8CBC-B648C0321130}|Learnify.Repository\\Learnify.Repository.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\learnify.repository\\migrations\\20260108053632_initialsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38148CF6-ACF4-452A-8CBC-B648C0321130}|Learnify.Repository\\Learnify.Repository.csproj|solutionrelative:learnify.repository\\migrations\\20260108053632_initialsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\netbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|solutionrelative:netbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\netbackend\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|solutionrelative:netbackend\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\netbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|solutionrelative:netbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\netbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|solutionrelative:netbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\netbackend\\netbackend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|solutionrelative:netbackend\\netbackend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A52F131-DD26-4C2C-A783-64F44305545A}|Learnify.Business\\Learnify.Business.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\learnify.business\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{11030B96-9439-43F0-AD6C-CA57C6DA11B6}|Learnify.Common\\Learnify.Common.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\learnify.common\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11030B96-9439-43F0-AD6C-CA57C6DA11B6}|Learnify.Common\\Learnify.Common.csproj|solutionrelative:learnify.common\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\netbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F68B9B87-1709-4278-80DD-AD72BCF6E8D2}|NetBackend\\NetBackend.csproj|solutionrelative:netbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38148CF6-ACF4-452A-8CBC-B648C0321130}|Learnify.Repository\\Learnify.Repository.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\learnify.repository\\migrations\\20260104085004_initialsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38148CF6-ACF4-452A-8CBC-B648C0321130}|Learnify.Repository\\Learnify.Repository.csproj|solutionrelative:learnify.repository\\migrations\\20260104085004_initialsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38148CF6-ACF4-452A-8CBC-B648C0321130}|Learnify.Repository\\Learnify.Repository.csproj|d:\\work\\ai_instructor\\.netbe\\learnify-net-backend\\learnify.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,11 +74,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "20260108053632_InitialSync.cs",
+              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Migrations\\20260108053632_InitialSync.cs",
+              "RelativeDocumentMoniker": "Learnify.Repository\\Migrations\\20260108053632_InitialSync.cs",
+              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Migrations\\20260108053632_InitialSync.cs",
+              "RelativeToolTip": "Learnify.Repository\\Migrations\\20260108053632_InitialSync.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T05:36:56.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "NetBackend\\appsettings.Production.json",
+              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.Production.json",
+              "RelativeToolTip": "NetBackend\\appsettings.Production.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-08T05:30:16.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "NetBackend\\appsettings.Development.json",
+              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.Development.json",
+              "RelativeToolTip": "NetBackend\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-06T09:51:16.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Learnify.Business\\Services\\UserService.cs",
+              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Services\\UserService.cs",
+              "RelativeToolTip": "Learnify.Business\\Services\\UserService.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAcwMkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T23:44:48.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UserDto.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "Learnify.Common\\DTOs\\UserDto.cs",
@@ -78,19 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Learnify.Business\\Services\\UserService.cs",
-              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Services\\UserService.cs",
-              "RelativeToolTip": "Learnify.Business\\Services\\UserService.cs",
-              "ViewState": "AgIAANIAAAAAAAAAAAAowOMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T23:44:48.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Learnify.Repository\\Repositories\\UserRepository.cs",
@@ -102,32 +153,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.json",
+              "RelativeDocumentMoniker": "NetBackend\\appsettings.json",
+              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.json",
+              "RelativeToolTip": "NetBackend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-01T10:53:35.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NetBackend.http",
+              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.http",
+              "RelativeDocumentMoniker": "NetBackend\\NetBackend.http",
+              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\NetBackend.http",
+              "RelativeToolTip": "NetBackend\\NetBackend.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-01-06T15:53:16.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\Program.cs",
               "RelativeDocumentMoniker": "NetBackend\\Program.cs",
               "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\Program.cs",
               "RelativeToolTip": "NetBackend\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACoAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwDIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-01T10:12:42.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.json",
-              "RelativeDocumentMoniker": "NetBackend\\appsettings.json",
-              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\appsettings.json",
-              "RelativeToolTip": "NetBackend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-01T10:53:35.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Models\\User.cs",
               "RelativeDocumentMoniker": "Learnify.Repository\\Models\\User.cs",
@@ -139,19 +203,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "NetBackend\\Controllers\\UsersController.cs",
               "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\NetBackend\\Controllers\\UsersController.cs",
               "RelativeToolTip": "NetBackend\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAswJMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAqwIQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-01T10:48:27.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Learnify.Repository\\Data\\AppDbContext.cs",
@@ -163,19 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20260104085004_InitialSync.cs",
-              "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Migrations\\20260104085004_InitialSync.cs",
-              "RelativeDocumentMoniker": "Learnify.Repository\\Migrations\\20260104085004_InitialSync.cs",
-              "ToolTip": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Migrations\\20260104085004_InitialSync.cs",
-              "RelativeToolTip": "Learnify.Repository\\Migrations\\20260104085004_InitialSync.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T08:50:09.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Enums\\Role.cs",
               "RelativeDocumentMoniker": "Learnify.Common\\Enums\\Role.cs",
@@ -187,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Learnify.Common.csproj",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Common\\Learnify.Common.csproj",
               "RelativeDocumentMoniker": "Learnify.Common\\Learnify.Common.csproj",
@@ -199,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Repository\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Learnify.Repository\\Interfaces\\IUserRepository.cs",
@@ -211,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\work\\AI_Instructor\\.NetBE\\Learnify-net-backend\\Learnify.Business\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Learnify.Business\\Interfaces\\IUserService.cs",

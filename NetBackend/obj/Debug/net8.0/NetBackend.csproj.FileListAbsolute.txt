@@ -223,3 +223,4 @@ D:\work\AI_Instructor\.NetBE\Learnify-net-backend\NetBackend\obj\Debug\net8.0\re
 D:\work\AI_Instructor\.NetBE\Learnify-net-backend\NetBackend\obj\Debug\net8.0\NetBackend.pdb
 D:\work\AI_Instructor\.NetBE\Learnify-net-backend\NetBackend\obj\Debug\net8.0\NetBackend.genruntimeconfig.cache
 D:\work\AI_Instructor\.NetBE\Learnify-net-backend\NetBackend\obj\Debug\net8.0\ref\NetBackend.dll
+D:\work\AI_Instructor\.NetBE\Learnify-net-backend\NetBackend\bin\Debug\net8.0\appsettings.Production.json

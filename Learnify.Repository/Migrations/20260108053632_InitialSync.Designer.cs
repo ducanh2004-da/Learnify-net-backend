@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Learnify.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260104085004_InitialSync")]
+    [Migration("20260108053632_InitialSync")]
     partial class InitialSync
     {
         /// <inheritdoc />
