@@ -23,6 +23,7 @@ namespace NetBackend.Controllers
 
         // Trả về UserListResponse trực tiếp
         [HttpGet]
+        [ResponseCache(Duration = 240, Location = ResponseCacheLocation.Any)]
         public async Task<ActionResult<UserListResponse>> GetAllUsers()
         {
             try
@@ -33,11 +34,16 @@ namespace NetBackend.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error getting all users");
-                return StatusCode(500, new { message = "Internal server error" });
+                return StatusCode(500, new
+                {
+                    message = ex.Message,
+                    dbError = ex.InnerException?.Message
+                });
             }
         }
 
         [HttpGet("{id}")]
+        [ResponseCache(Duration = 240, Location = ResponseCacheLocation.Any)]
         public async Task<ActionResult<UserResponse>> GetUser(string id)
         {
             try
@@ -143,5 +149,52 @@ namespace NetBackend.Controllers
                 return StatusCode(500, new { message = "Internal server error" });
             }
         }
+
+        [HttpPost("diamonds")]
+        public async Task<ActionResult<UserListResponse>> UpdateDiamond([FromBody] UpdateDiamondInput input)
+        {
+            try
+            {
+                var result = await _userService.UpdateDiamond(input);
+                if (!result.IsSuccess)
+                    return BadRequest(new { message = result.Message });
+
+                return Ok(result);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating diamonds for User {UserId}", input.UserId);
+
+                // Cập nhật dòng này để in thẳng lỗi của Database ra Postman/Swagger
+                return StatusCode(500, new
+                {
+                    message = "Internal server error",
+                    error = ex.Message,
+                    innerError = ex.InnerException?.Message, // ĐÂY LÀ CHÌA KHÓA!
+                    stackTrace = ex.StackTrace
+                });
+            }
+        }
+
+        [HttpGet("leaderboard/steaks")]
+        [ResponseCache(Duration = 60, Location = ResponseCacheLocation.Any)] // Cache 60s để giảm tải DB
+        public async Task<ActionResult<List<UserLeaderboardResponse>>> GetSteakLeaderboard()
+        {
+            try
+            {
+                var leaderboard = await _userService.GetTop10User();
+                return Ok(leaderboard);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting steak leaderboard");
+                return StatusCode(500, new { message = "Internal server error" });
+            }
+        }
+
     }
 }

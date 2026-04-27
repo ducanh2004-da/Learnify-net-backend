@@ -189,6 +189,77 @@ namespace Learnify.Business.Services
             return MapToListResponse(true, Enumerable.Empty<UserResponse>(), "User deleted successfully");
         }
 
+        public async Task<UserListResponse> UpdateDiamond(UpdateDiamondInput input)
+        {
+            var user = await _userRepository.GetByIdAsync(input.UserId);
+            if(user == null)
+            {
+                throw new KeyNotFoundException($"User with ID {input.UserId} not found");
+            }
+            if(input.Amount <= 0)
+            {
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Amount must be greater than 0");
+            }
+            if(input.TransactionType.ToUpper() == "EARN")
+            {
+                user.Diamond = (user.Diamond ?? 0) + input.Amount;
+            }
+            else if(input.TransactionType.ToUpper() == "SPEND")
+            {
+                if((user.Diamond ?? 0) < input.Amount)
+                {
+                    return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Not enough diamonds to spend");
+                }
+                user.Diamond -= input.Amount;
+            }
+            else
+            {
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Invalid Transaction Type. Must be EARN or SPEND.");
+            }
+            if (!Enum.TryParse<DiamondTransactionType>(input.TransactionType, true, out var parsedType))
+            {
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Invalid Transaction Type.");
+            }
+
+            if (!Enum.TryParse<DiamondSource>(input.Source, true, out var parsedSource))
+            {
+                return MapToListResponse(false, Enumerable.Empty<UserResponse>(), "Invalid Diamond Source.");
+            }
+
+            if (user.CreatedAt.Kind == DateTimeKind.Unspecified)
+            {
+                user.CreatedAt = DateTime.SpecifyKind(user.CreatedAt, DateTimeKind.Utc);
+            }
+            user.UpdatedAt = DateTime.UtcNow;
+
+            var transaction = new DiamondTransaction
+            {
+                UserId = input.UserId,
+                Amount = input.Amount,
+                Type = parsedType,     // Dùng biến Enum vừa ép kiểu
+                Source = parsedSource, // Dùng biến Enum vừa ép kiểu
+                Description = "Processing Diamond Transaction",
+                CreatedAt = DateTime.UtcNow,
+            };
+
+            await _userRepository.UpdateDiamond(user, transaction);
+            var dto = MapToResponse(user);
+            return MapToListResponse(true, dto, $"Successfully processed {input.TransactionType} of {input.Amount} diamonds.");
+        }
+
+        public async Task<List<UserLeaderboardResponse>> GetTop10User()
+        {
+            var users = await _userRepository.GetTop10User();
+            return users.Select(u => new UserLeaderboardResponse
+            {
+                Id = u.Id,
+                Username = u.Username,
+                Avatar = u.Avatar,
+                CurrentSteak = u.CurrentSteak ?? 0,
+                Diamond = u.Diamond ?? 0
+            }).ToList();
+        }
+
         private UserResponse MapToResponse(User user)
         {
             return new UserResponse
@@ -200,8 +271,14 @@ namespace Learnify.Business.Services
                 Address = user.Address,
                 Role = user.Role.ToString(),
                 Avatar = user.Avatar ?? string.Empty,
+                IsVerified = user.IsVerified,
+                CurrentSteak = user.CurrentSteak,
+                LongestSteak = user.LongestSteak,
+                Diamond = user.Diamond,
                 CreatedAt = user.CreatedAt,
-                UpdatedAt = user.UpdatedAt
+                UpdatedAt = user.UpdatedAt,
+                IsDeleted = user.IsDeleted,
+                DeleteAt = user.DeleteAt,
             };
         }
 

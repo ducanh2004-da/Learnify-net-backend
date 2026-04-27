@@ -11,5 +11,7 @@ namespace Learnify.Business.Interfaces
         Task<UserListResponse> UpdateUserAsync(UpdateUserInput input);
         Task<UserListResponse> UpdateUserAdminAsync(UpdateUserAdminInput input);
         Task<UserListResponse> DeleteUserAsync(string id);
+        Task<UserListResponse> UpdateDiamond(UpdateDiamondInput input);
+        Task<List<UserLeaderboardResponse>> GetTop10User();
     }
 }

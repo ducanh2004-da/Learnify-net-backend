@@ -13,8 +13,14 @@ namespace Learnify.Common.DTOs
         public string? Address { get; set; }
         public string Role { get; set; } = string.Empty;
         public string? Avatar { get; set; }
+        public bool? IsVerified { get; set; }
+        public int? CurrentSteak { get; set; }
+        public int? LongestSteak { get; set; }
+        public int? Diamond { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
+        public bool? IsDeleted { get; set; }
+        public DateTimeOffset? DeleteAt { get; set; }
     }
 
     public class UserListResponse
@@ -50,5 +56,21 @@ namespace Learnify.Common.DTOs
     public class UpdateUserAdminInput : UpdateUserInput
     {
         public string? Role { get; set; } = "USER";
+    }
+
+    public class UpdateDiamondInput
+    {
+        public string UserId { get; set; } = string.Empty;
+        public int Amount { get; set; }
+        public string TransactionType { get; set; } = string.Empty;
+        public string Source { get; set; } = string.Empty;
+    }
+    public class UserLeaderboardResponse
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Username { get; set; } = string.Empty;
+        public string? Avatar { get; set; }
+        public int CurrentSteak { get; set; }
+        public int Diamond { get; set; }
     }
 }

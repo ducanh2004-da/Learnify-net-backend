@@ -138,5 +138,51 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "NetBackend.Controllers.UsersController",
+    "Method": "UpdateDiamond",
+    "RelativePath": "api/Users/diamonds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "Learnify.Common.DTOs.UpdateDiamondInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Learnify.Common.DTOs.UserListResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NetBackend.Controllers.UsersController",
+    "Method": "GetSteakLeaderboard",
+    "RelativePath": "api/Users/leaderboard/steaks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Learnify.Common.DTOs.UserLeaderboardResponse, Learnify.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

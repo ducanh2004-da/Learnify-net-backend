@@ -60,5 +60,19 @@ namespace Learnify.Repository.Repositories
         {
             return await _context.Users.CountAsync();
         }
+
+        public async Task UpdateDiamond(User user, DiamondTransaction transaction)
+        {
+            _context.Users.Update(user);
+            await _context.DiamondTransactions.AddAsync(transaction);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<List<User>> GetTop10User()
+        {
+            return await _context.Users
+                .Where(u => u.IsDeleted == false || u.IsDeleted == null)
+                .OrderByDescending(u => u.CurrentSteak)
+                .Take(10) .ToListAsync();
+        }
     }
 }

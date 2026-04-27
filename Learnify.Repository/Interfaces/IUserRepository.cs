@@ -13,5 +13,7 @@ namespace Learnify.Repository.Interfaces
         Task UpdateAsync(User user);
         Task DeleteAsync(string id);              // nếu Id là int -> Task DeleteAsync(int id)
         Task<int> CountAsync();
+        Task UpdateDiamond(User user, DiamondTransaction transaction);
+        Task<List<User>> GetTop10User();
     }
 }
